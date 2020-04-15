@@ -34,7 +34,7 @@ import me.jessyan.mvparms.demo.mvp.ui.activity.UserActivity;
  * <a href="https://github.com/JessYanCoding">Follow me</a>
  * ================================================
  */
-@ActivityScope
+@ActivityScope //未使用自定义@Scope注解，每次@Inject注解获取的Student对象都是一个新的对象。
 @Component(modules = UserModule.class, dependencies = AppComponent.class)
 public interface UserComponent {
     void inject(UserActivity activity);
